@@ -1,0 +1,22 @@
+#homepage
+{
+	font-size:30px;
+	font-family:"Calibri";
+}
+#describe
+{
+	font-size:15px;
+	font-family:"仿宋，宋体";
+}
+#title
+{
+	margin: 0;
+	width:100%;
+	height:100px;
+	background-color:"#C8F3E4";
+}
+#login
+{
+	float:right;
+	margin-right:30px;
+}

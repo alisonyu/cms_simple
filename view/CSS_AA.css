@@ -1,0 +1,17 @@
+body
+{
+	background-color:'#EFF0DC';
+}
+h1
+{
+	font-size:12mm;
+	font-family:"仿宋，微软雅黑，宋体";
+	font-weight:normal;
+	text-align:center;
+}
+#addtitle
+{
+	width:200px;
+	height:25px;
+}
+
