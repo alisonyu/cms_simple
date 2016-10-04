@@ -23,7 +23,7 @@ class content
 	{
 		
 		$conn=connectdb();
-		$t=date("Y-m-d h:i:sa");
+		$t=date("Y-m-d G:i:s");
 		$f=$this->title;
 		$sql="INSERT INTO contenttb ".
        "(id,title,content,EdiTime) ".

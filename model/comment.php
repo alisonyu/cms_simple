@@ -1,0 +1,14 @@
+<?php
+include("../controler/CommentControler.php");
+include("connectdb.php");
+?>
+<?php
+$conn=connectdb();
+$id=$_POST['id'];
+$name=$_POST['username'];
+$email=$_POST['email'];
+$comment=$_POST['comment'];
+comment_add($conn,$id,$name,$comment,$email);
+header("Location:../view/caogao.php?id={$id}");
+mysql_close($conn);
+?>
