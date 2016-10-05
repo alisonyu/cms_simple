@@ -3,7 +3,7 @@
 //这个是用来处理页面显示（目录列表），分页等功能
 ?>
 <?php
-include("header.html");
+include("header.php");
 include("../model/connectdb.php");
 ?>
 
@@ -55,7 +55,7 @@ function GetSumPage()
 	}
 	$result=mysql_fetch_array($result,MYSQL_ASSOC);
 	$result=$result['value'];
-	if($result%10) return $result/10+1;
+	if($result%10) return ceil($result/10);
 	else return$result/10;
 }
 
@@ -75,15 +75,29 @@ function GetMinPage($nowpage)
 //分页函数
 function DifPage($nowpage,$minpage,$maxpage,$sumpage)
 {
+	echo "<div class='diffpage' style='margin-bottom:20px;'>";
+	if($nowpage!=1)
+	{
+		$prepage=$nowpage-1;
+		echo "<a href='pagecontroller.php?page={$prepage}' class='difpage'>previous</a>&nbsp&nbsp";
+	}
 	for($i=$minpage;$i<=$maxpage;$i++)
 	{
 		if($i==$nowpage)
 		{
-			echo "<a href='pagecontroller.php?page={$i}' class='difpage' style='color:red;'>{$i}</a>&nbsp&nbsp";
+			echo "<a href='pagecontroller.php?page={$i}' class='difpage' style='color:red;font-size:16px;'>{$i}</a>&nbsp&nbsp";
 		}
 		else 
-			echo "<a href='pagecontroller.php?page={$i}' class='difpage'>{$i}</a>&nbsp&nbsp";
+			echo "<a href='pagecontroller.php?page={$i}' class='difpage' style='font-size:16px;'>{$i}</a>&nbsp&nbsp";
 	}
+	if($nowpage!=$sumpage)
+	{
+		$nextpage=$nowpage+1;
+		echo "<a href='pagecontroller.php?page={$nextpage}' class='difpage'>next</a>&nbsp&nbsp";
+		
+	}
+	echo '</div>';
+	echo '</br>';
 }
 ?>
 

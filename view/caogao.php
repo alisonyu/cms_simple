@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <?php
-include("header.html");
+include("header.php");
 include("../model/connectdb.php");
 include("../controler/CommentControler.php");
 ?>

@@ -20,7 +20,7 @@ session_start();
 	else
 	{
 	$name=getuser();
-	echo "<a href='../view/loginpage.html' id='login'>{$name}</a>";
+	echo "<a href='../view/logined.php' id='login'>{$name}</a>";
 	}
 	
 ?>
