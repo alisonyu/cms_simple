@@ -15,6 +15,19 @@
   return $conn;
  }
  
+ function connect()
+ {
+	 $dbhost="localhost:3306";
+     $dbuser="root";
+     $dbpass="root";
+     $conn=mysql_connect($dbhost,$dbuser,$dbpass);
+	if(!$conn)
+	{
+	 die("the sql can not be connected ".mysql_error());
+	}
+	mysql_query("set names utf8"); 
+	return $conn;
+ }
  function UpdateSumCol()
  {
 	 //这是用来更新contenttb里面的总数的
