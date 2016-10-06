@@ -21,7 +21,7 @@ class content
 	
 	function AddIntoSQL()
 	{
-		
+		//将文章添加到数据库
 		$conn=connectdb();
 		$t=date("Y-m-d G:i:s");
 		$f=$this->title;
@@ -36,7 +36,10 @@ class content
 		}
 		else
 			echo "add into sql successfully".'</br>';
+		//当添加文章成功的时候，文章数加1，更新到property表的sumcol里面，用于计算分页。
 		ColPlusOne($conn);
+		echo "come back to home page in 2 seconds".'</br>';
+		echo "<meta http-equiv='refresh' content='2; url=../view/pagecontroller.php?page=1'>";
 		mysql_close($conn);
 	}
 	

@@ -1,3 +1,3 @@
 <?php
-header("Location: http://localhost/view/pagecontroller.php?page=1"); 
+header("Location: ../view/pagecontroller.php?page=1"); 
 ?>

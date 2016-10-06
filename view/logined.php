@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <?php
 include("../controler/logincontroller.php");
-//login page
+//登陆成功后的功能页面
 session_start();
 if(!is_login())
 {

@@ -1,5 +1,5 @@
 <?php
-//examine login's information
+//验证登陆信息的账号和密码是否正确
 include("../model/connectdb.php");
 include("../controler/logincontroller.php");
 $user=$_POST['userid'];
@@ -17,10 +17,11 @@ if(!$result)
 }
 if(mysql_num_rows($result)>0)
 {
+	//登陆成功，登记登陆信息
 	echo "{$user} login successfully".'</br>';
 	setlogin($user);
-	echo "come back to home page in 3 seconds".'</br>';
-	echo "<meta http-equiv='refresh' content='3; url=../view/pagecontroller.php?page=1'>";
+	echo "come back to home page in 2 seconds".'</br>';
+	echo "<meta http-equiv='refresh' content='2; url=../view/pagecontroller.php?page=1'>";
 }
 else
 {

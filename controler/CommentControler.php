@@ -1,6 +1,7 @@
 <?php
 function comment_show($conn,$id)
 {
+	//此函数的作用是显示评论
 	//这里需要传入一个连接数据库后返回的变量是为了避免重复连接
 	$sql="
 			select * from commenttb
@@ -29,6 +30,7 @@ function comment_show($conn,$id)
 
 function comment_add($conn,$id,$name,$comment,$email)
 {
+	//添加评论
 	if(!$conn)
 	{
 		echo "connect error";
@@ -52,6 +54,7 @@ function comment_add($conn,$id,$name,$comment,$email)
 
 function comment_board($id)
 {
+	//生成评论板
 	echo "
 			<head>
 			<link rel=\"stylesheet\" type=\"text/css\" href=\"..\view\css_comm.css\" />
@@ -65,8 +68,9 @@ function comment_board($id)
 			<input type=\"text\" name=\"email\" class='form-control '>
 			</br></br>
 			<font>评论内容</font></br>
-			<textarea name=\"comment\" rows=\"20\" cols=\"40\" class='form-control '>
+			<textarea name=\"comment\" rows=\"20\" cols=\"80\" class='form-control '>
 			</textarea>
+			</br>
 			</br>
 			<input type='hidden' name='id' value={$id}>
 			<input type=\"submit\" value=\"Submit\">

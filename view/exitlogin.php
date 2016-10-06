@@ -1,5 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <?php
+//退出登录的页面
 include("../controler/logincontroller.php");
 session_start();
 if(exit_login())

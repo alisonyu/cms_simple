@@ -18,7 +18,7 @@ function format($content)
 
 function add($title,$content)
 {
-	 
+	 //添加文章到数据库
 	$a=new content();
 	$a->set_title($title);
 	$a->set_text($content);

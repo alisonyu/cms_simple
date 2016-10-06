@@ -18,6 +18,7 @@ session_start();
 	}
 	else
 	{
+	//如果已经登陆，显示登陆者的信息
 	$name=getuser();
 	echo "<a href='../view/logined.php' id='login'>{$name}</a>";
 	}

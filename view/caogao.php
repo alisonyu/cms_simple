@@ -6,6 +6,7 @@ include("../controler/CommentControler.php");
 ?>
 
 <?php
+// 显示文章的主要内容
 //	通过提交过来的表单数据来提取数据库相应索引的文件,用来显示特定页面的内容
 $id=$_GET['id'];
 $conn=connectdb();
@@ -31,7 +32,9 @@ echo "</body>";
 echo "</br>";
 echo "<HR>";
 echo "<h1>评论区</h1>";
+//显示评论区
 comment_show($conn,$id);
+//显示评论板
 comment_board($id);
 mysql_close($conn);
 

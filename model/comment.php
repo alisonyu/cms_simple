@@ -3,6 +3,7 @@ include("../controler/CommentControler.php");
 include("connectdb.php");
 ?>
 <?php
+//处理从评论版传来的信息，并且将评论添加到数据库中
 $conn=connectdb();
 $id=$_POST['id'];
 $name=$_POST['username'];
