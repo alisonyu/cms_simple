@@ -1,28 +1,34 @@
-¸ÃÏµÍ³¿ÉÒÔÔÚPHP 5.3.29+mysql5.08ÏÂÔËÐÐ
+ï»¿##å†…å®¹ç®¡ç†ç³»ç»Ÿ
 
-ÔÚÔËÐÐÇ°ÒªÏÈÉèÖÃ/model/connectdb.phpÀïÃæµÄconnectdb(),connect()ÓÐ¹ØMySQLµÄÏà¹ØÐÅÏ¢£¬Ö®ºóÉèÖÃinitialize_db.phpµÄ$db_name£¬×¢ÒâÒªÓëÔÚconnectdb()µÄ$db_nameÒªÒ»ÖÂ¡£
+###è¿è¡ŒçŽ¯å¢ƒ
+è¯¥ç³»ç»Ÿå¯ä»¥åœ¨PHP 5.3.29+mysql5.08ä¸‹è¿è¡Œ
 
-Íê³ÉÅäÖÃ¿ÉÒÔ´ò¿ªindextest.php£¨ÔÚÍê³ÉÒÔÉÏµÄÅäÖÃ¹¤×÷ºó¾Í¿ÉÒÔÖØÃüÃûÎªindex.php×÷ÎªÖ÷Ò³£©£¬loginÀïÃæÄ¬ÈÏµÄÓÃ»§ÃûºÍÃÜÂëÊÇadmin£¬µÇÂ½ºó¿ÉÒÔÌí¼ÓÎÄÕÂÒÔ¼°µÇ³ö¡£Ä¬ÈÏµÄ·ÖÒ³ÊÇ10ÆªÎÄÕÂÒ»Ò³£¬·ÖÒ³µÄÎÄÕÂÊý¿ÉÒÔÔÚ../view/pagecontroller.phpµÄdiffpage()ÀïÉèÖÃ$shownumÀ´¸Ä±ä¡£
+###åˆå§‹åŒ–é…ç½®è¯´æ˜Ž
+åœ¨è¿è¡Œå‰è¦å…ˆè®¾ç½®**/model/connectdb.php**é‡Œé¢çš„**connectdb()**,**connect()**æœ‰å…³MySQLçš„ç›¸å…³ä¿¡æ¯ï¼Œä¹‹åŽè®¾ç½®**initialize_db.php**çš„**$db_name**ï¼Œæ³¨æ„è¦ä¸Žåœ¨connectdb()çš„$db_nameè¦**ä¸€è‡´**ã€‚
 
-Ò»ÏÂ¼òµ¥ËµÃ÷¸÷¸öÎÄ¼þµÄ×÷ÓÃ
-¸ùÎÄ¼þ
-¡¡¡¡Indextest.php              ÓÃÓÚÖ÷Ò³£¬Íê³ÉÅäÖÃºóÖØÃüÃûÎªindex.php
-¡¡¡¡Initialize_db.php          ³õÊ¼»¯Êý¾Ý¿â£¬½øÐÐ½¨¿â½¨±íµÄ²Ù×÷
-Controler
-¡¡¡¡addcontroler.php           ¶¨ÒåÌí¼ÓµÄÎÄÕÂµÄÏà¹Øº¯Êý
-¡¡¡¡textcontroler.php          ´¦ÀíÌí¼ÓÎÄÕÂµÄÏà¹Ø¸ñÊ½£¬²¢´¦ÀíÌí¼ÓÎÄÕÂµÄ²Ù×÷
-¡¡¡¡Commentcontroler.php       ´¦ÀíÆÀÂÛµÄÏà¹Ø²Ù×÷
-¡¡¡¡logincontroller.php        ´¦ÀíµÇÂ½µÄÏà¹Ø²Ù×÷  
-model
-¡¡¡¡comment.php                ´¦ÀíÆÀÂÛµÄÊý¾Ý
-¡¡¡¡connectdb.php	       ¶¨ÒåÁ¬½ÓÊý¾Ý¿âµÄÒÔ¼°ÓëÊý¾Ý¿âÏà¹ØµÄº¯Êý
-¡¡¡¡Loginexam.php	       ÑéÖ¤µÇÂ½ÐÅÏ¢
-View
-¡¡¡¡pagecontroler.php 	       ÏÔÊ¾£¨Ö÷£©Ò³Ãæ£¬¶¨Òå·ÖÒ³µÄÏà¹Øº¯Êý
-¡¡¡¡Caogao.php                 ÏÔÊ¾ÎÄÕÂÏêÇé
-¡¡¡¡Header.php		       ÏÔÊ¾Ã¿¸öÒ³ÃæÉÏÃæµÄ±êÌâ
-¡¡¡¡Loginpage.html	       µÇÂ½Ò³Ãæ
-¡¡¡¡Commentboard.html	       ÆÀÂÛ°æ
-¡¡¡¡Addarticle.html	       Ìí¼ÓÎÄÕÂÒ³Ãæ
-¡¡¡¡Exitlogin.html             ÍË³öµÇÂ½
-¡¡¡¡ 
+###åŸºæœ¬åŠŸèƒ½è¯´æ˜Ž
+å®Œæˆé…ç½®å¯ä»¥æ‰“å¼€indextest.phpï¼ˆåœ¨å®Œæˆä»¥ä¸Šçš„é…ç½®å·¥ä½œåŽå°±å¯ä»¥é‡å‘½åä¸ºindex.phpä½œä¸ºä¸»é¡µï¼‰ï¼Œloginé‡Œé¢é»˜è®¤çš„ç”¨æˆ·åå’Œå¯†ç æ˜¯adminï¼Œç™»é™†åŽå¯ä»¥æ·»åŠ æ–‡ç« ä»¥åŠç™»å‡ºã€‚é»˜è®¤çš„åˆ†é¡µæ˜¯10ç¯‡æ–‡ç« ä¸€é¡µï¼Œåˆ†é¡µçš„æ–‡ç« æ•°å¯ä»¥åœ¨../view/pagecontroller.phpçš„diffpage()é‡Œè®¾ç½®$shownumæ¥æ”¹å˜ã€‚
+
+
+###å„ä¸ªæ–‡ä»¶çš„ç®€è¦è¯´æ˜Ž
+#####æ ¹æ–‡ä»¶  
+ã€€ã€€Indextest.php              ç”¨äºŽä¸»é¡µï¼Œå®Œæˆé…ç½®åŽé‡å‘½åä¸ºindex.php  
+ã€€ã€€Initialize_db.php          åˆå§‹åŒ–æ•°æ®åº“ï¼Œè¿›è¡Œå»ºåº“å»ºè¡¨çš„æ“ä½œ  
+#####Controler  
+ã€€ã€€addcontroler.php           å®šä¹‰æ·»åŠ çš„æ–‡ç« çš„ç›¸å…³å‡½æ•°  
+ã€€ã€€textcontroler.php          å¤„ç†æ·»åŠ æ–‡ç« çš„ç›¸å…³æ ¼å¼ï¼Œå¹¶å¤„ç†æ·»åŠ æ–‡ç« çš„æ“ä½œ  
+ã€€ã€€Commentcontroler.php       å¤„ç†è¯„è®ºçš„ç›¸å…³æ“ä½œ  
+ã€€ã€€logincontroller.php        å¤„ç†ç™»é™†çš„ç›¸å…³æ“ä½œ     
+#####model  
+ã€€ã€€comment.php                å¤„ç†è¯„è®ºçš„æ•°æ®  
+ã€€ã€€connectdb.php           å®šä¹‰è¿žæŽ¥æ•°æ®åº“çš„ä»¥åŠä¸Žæ•°æ®åº“ç›¸å…³çš„å‡½æ•°  
+ã€€ã€€Loginexam.php	       éªŒè¯ç™»é™†ä¿¡æ¯  
+#####View  
+ã€€ã€€pagecontroler.php 	       æ˜¾ç¤ºï¼ˆä¸»ï¼‰é¡µé¢ï¼Œå®šä¹‰åˆ†é¡µçš„ç›¸å…³å‡½æ•°  
+ã€€ã€€Caogao.php                 æ˜¾ç¤ºæ–‡ç« è¯¦æƒ…  
+ã€€ã€€Header.php		       æ˜¾ç¤ºæ¯ä¸ªé¡µé¢ä¸Šé¢çš„æ ‡é¢˜  
+ã€€ã€€Loginpage.html	       ç™»é™†é¡µé¢  
+ã€€ã€€Commentboard.html	       è¯„è®ºç‰ˆ  
+ã€€ã€€Addarticle.html	       æ·»åŠ æ–‡ç« é¡µé¢  
+ã€€ã€€Exitlogin.html             é€€å‡ºç™»é™†   
+ã€€ã€€ 
